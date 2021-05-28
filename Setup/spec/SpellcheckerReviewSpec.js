@@ -15,13 +15,13 @@ describe("Megasoft", function() {
       })
   })
   describe('SpellChecker for two value', function() {
-    it ("Correct spelling of dog harcoded",function() {
+    it ("two correct spellings of waled dog",function() {
       expect(megasoft.SpellChecker("walked dog")).toEqual("walked dog");
     })
 
-    // it ("InCorrect spelling of dog // doog",function() {
-    //   expect(megasoft.SpellChecker("wlk doog")).toEqual("~wlk~ ~doog~");
-    // })
+    it ("two InCorrect spellings of wlk doog",function() {
+      expect(megasoft.SpellChecker("wlk doog")).toEqual("~wlk~ ~doog~");
+    })
 })
   
 
