@@ -1,14 +1,19 @@
 class Megasoft {
 
   SpellChecker(text){
-    let spellingBank = ["dog"]
+    let spellingBank = ["dog","walked"]
 
-    if(spellingBank[0] != text){
-      return "~" + text + "~"
+    let textarray = text.split(" ")
+
+    for (let index = 0; index < textarray.length; index++) {
+     if (spellingBank.includes(textarray[index]) == false){
+      textarray[index] = "~" + textarray[index] + "~"
+     }
+
     }
-    return text
-  }
+    let correctedtext = textarray.join(" ")
 
-  
+    return correctedtext
+  }
 
 }
